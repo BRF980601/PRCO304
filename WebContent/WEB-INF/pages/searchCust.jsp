@@ -165,7 +165,7 @@
 		<div class="body-content">
 			<div class="">
 				<div class="field" style="vertical-align: center;padding-top: 10pt; " align="center">
-					用户名：<input type="text" id="search-name" class="inputadd"
+					User name：<input type="text" id="search-name" class="inputadd"
 						name="sub-search" value="" style="width:7%;height: 20pt;" /> &nbsp;&nbsp;
 					身份证号：<input type="text" id="search-identity" class="inputadd"
 						name="sub-search" value="" style="width:10%;height: 20pt;" /> 
