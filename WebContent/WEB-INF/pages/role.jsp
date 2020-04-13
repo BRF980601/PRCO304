@@ -89,7 +89,7 @@
 	<br />
 	<table >
 		<tr>
-			<th colspan="5">角色列表</th>
+			<th colspan="5">Role list</th>
 		</tr>
 		<tr>
 			<th >选择</th>
