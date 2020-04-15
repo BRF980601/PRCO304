@@ -38,40 +38,40 @@
     <form  action="findRentTableHandler"  method="post">
 		<table>
 			<tr>
-				<td>出租单编号</td>
+				<td>Rent number</td>
 				<td><input type="text" name="rentNo"/></td>
-				<td>还车日期</td>
+				<td>Real end time</td>
 				<td><input type="text" name="realEndTime" id="realRentEndTime" class="Wdate" onfocus="WdatePicker({readOnly:true})" /></td>
 			</tr>
 			<tr>
-				<td>起租日期</td>
+				<td>Begin time</td>
 				<td><input type="text" name="beginTime" id="rentStartTime" class="Wdate" onfocus="WdatePicker({readOnly:true})" /></td>
-				<td>应还日期</td>
+				<td>End time</td>
 				<td><input type="text" name="endTime"  id="rentEndTime"  class="Wdate" onfocus="WdatePicker({readOnly:true})" /></td>
 			</tr>
 			<tr>
-				<td>出租单状态</td>
+				<td>Rental order status</td>
 				<td>
 					<select name="rentFlag">
-						<option value="-1">出租状态</option>
-						<option value="3">已废弃</option>
-						<option value="1">已出租</option>
-						<option value="2">已结算</option>
+						<option value="-1">Rental status</option>
+						<option value="3">Obsolete</option>
+						<option value="1">Leased</option>
+						<option value="2">Settled</option>
 					</select>
 				</td>
-				<td>服务人员编号</td>
+				<td>Service staff number</td>
 				<td>
 					<input type="text" name="username" id="cuserName"  class="required"/>
 				</td>
 			</tr>
 			<tr>
-				<td>车号</td>
+				<td>Car number</td>
 				<td><input type="text" name="carNumber"  /></td>
-				<td>客户身份证号</td>
+				<td>Customer id</td>
 				<td><input type="text" name="custIdentity" id="cidentity"  class="required"/></td>
 			</tr>
 			<tr>
-				<td colspan="3" style="text-align: center;"><input type="submit" value="确定" id="send" />&nbsp;&nbsp;<input type="reset" value="重置" /></td>
+				<td colspan="3" style="text-align: center;"><input type="submit" value="Submit" id="send" />&nbsp;&nbsp;<input type="reset" value="Reset" /></td>
 				<td></td>
 			</tr>
 		</table>

@@ -38,39 +38,39 @@
     <form  action="findChecktableList"  method="post">
 		<table>
 			<tr>
-				<td>检查单编号：</td>
+				<td>Checklist number:</td>
 				<td><input type="text" name="checkno"/></td>
-				<td>检查日期：</td>
+				<td>Check data:</td>
 				<td><input type="text" name="checktime" id="realRentEndTime" class="Wdate" onfocus="WdatePicker({readOnly:true})" /></td>
 			</tr>
 			<tr>
-				<td>出租单编号：</td>
+				<td>Rent id:</td>
 				<td>
 					<input type="text" name="rentid"/>
 				</td>
-				<td>备注：</td>
+				<td>Remarks:</td>
 				<td>
 					<input type="text" name="type"/>
 				</td>
 			</tr>
 			<tr>
-				<td>车辆问题：</td>
+				<td>Problem:</td>
 				<td><input type="text" name="problem"  /></td>
-				<td>赔费：</td>
+				<td>Compensation:</td>
 				<td><input type="text" name="paying"/></td>
 			</tr>
 			<tr>
-				<td>检查单状态</td>
+				<td>Checklist status</td>
 				<td>
 					<select name="flag">
-						<option value="-1">检查单状态</option>
-						<option value="0">已废弃</option>
-						<option value="1">正常</option>
+						<option value="-1">Checklist status</option>
+						<option value="0">Obsolete</option>
+						<option value="1">Normal</option>
 					</select>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="3" style="text-align: center;"><input type="submit" value="确定" id="send" />&nbsp;&nbsp;<input type="reset" value="重置" /></td>
+				<td colspan="3" style="text-align: center;"><input type="submit" value="Submit" id="send" />&nbsp;&nbsp;<input type="reset" value="Reset" /></td>
 				<td></td>
 			</tr>
 		</table>

@@ -52,7 +52,7 @@
 <script type="text/javascript"  src="js/jquery.js" ></script>
 <script type="text/javascript">
 	function deleteCar(carId){
-		var flag = window.confirm("确定删除车辆信息？");
+		var flag = window.confirm("Are you sure you want to delete vehicle information?");
 		if(flag){
 			window.location.href="deleteCar?carid="+carId;
 		}
@@ -95,7 +95,7 @@
 					</c:if>
 				</td>
 				<td>
-					<img src="images/cars/${car.img}" alt="暂无图片" style="width:100px;height:80px" />
+					<img src="images/cars/${car.img}" alt="No picture" style="width:100px;height:80px" />
 				</td>
 				<td><span id="cdes">${car.description}</span></td>
 				<td>

@@ -23,19 +23,19 @@
 				$("#moreTypeHref").click(function(){
 					$("#moreTypeDiv").slideToggle(200);
 					var tip = $(this).text();
-					if(tip.indexOf("更多")==-1){
-						$(this).text("查看更多>>>>");
+					if(tip.indexOf("More")==-1){
+						$(this).text("Find more>>>>");
 					}else{
-						$(this).text("<<<<隐藏");
+						$(this).text("<<<<Hide");
 					}
 				})
 				$("#moreBrandHref").click(function(){
 					$("#moreBrandDiv").slideToggle(200);
 					var tip = $(this).text();
-					if(tip.indexOf("更多")==-1){
-						$(this).text("查看更多>>>>");
+					if(tip.indexOf("More")==-1){
+						$(this).text("Find more>>>>");
 					}else{
-						$(this).text("<<<<隐藏");
+						$(this).text("<<<<Hide");
 					}
 				})
 				$.ajax({
@@ -43,8 +43,8 @@
 					url:"findCarsInfo",
 					dataType:"json",
 					success:function(data){
-						var typeContent = "车型：";
-						var brandContent = "品牌：";
+						var typeContent = "Car type：";
+						var brandContent = "Brand：";
 						for( var i=0; i<data.length; i++ ){
 							if(data[i].type){
 								typeContent += "<lable><input type='checkbox' name='type' value='"+data[i].type+"' />"+data[i].type+"</lable>";
@@ -116,7 +116,7 @@
 <div class="panel admin-panel">
   <div class="panel-head"><strong><span class="icon-pencil-square-o"></span>Customers choose car</strong></div>
   <div class="body-content" style="text-align:center" >
-  欢迎客户身份证号为<font color="red" >【${identity}】</font>来选车
+  Welcome id:<font color="red" >【${identity}】</font>to choose car
   <hr/>
      <div id="search">
 			<form method="post" action="findSomeCarsForCust">
@@ -129,28 +129,28 @@
 			</div>
 			<br/><br/>
 			<div id="search-rentPrice" >
-				租金：
+				Rent price:
 				<input type="text" name="lowRentPrice" id="clowRentPrice" class="priceStyle" />~
 				<input type="text" name="highRentPrice" id="chighRentPrice" class="priceStyle" />
 			</div>
 			<br/>
-			<button class="button bg-main icon-check-square-o" type="submit"  id="sub">查询</button>
+			<button class="button bg-main icon-check-square-o" type="submit"  id="sub">Inquire</button>
 		</form>
 	</div>
 		<hr />
 		<table>
 		<tr>
-			<th>车号</th>
-			<th>型号</th>
-			<th>品牌</th>
-			<th>颜色</th>
-			<th>价值（万元）</th>
-			<th>租金</th>
-			<th>押金</th>
-			<th>租用情况</th>
-			<th>汽车图片</th>
-			<th>简介</th>
-			<th>操作</th>
+			<th>Car number</th>
+			<th>Car type</th>
+			<th>Brand</th>
+			<th>Color</th>
+			<th>Price(puonds)</th>
+			<th>Rent price</th>
+			<th>Deposit</th>
+			<th>Lease situation</th>
+			<th>Picture</th>
+			<th>Introduction</th>
+			<th>Operating</th>
 		</tr>
 		<c:forEach items="${cars}" var="car" >
 			<tr>
@@ -163,22 +163,22 @@
 				<td>${car.deposit}</td>
 				<td>
 					<c:if test="${car.isrenting eq 0}">
-						未出租
+						Not Leased
 					</c:if>
 					<c:if test="${car.isrenting eq 1}">
-						已出租
+						Leased
 					</c:if>
 				</td>
 				<td>
-					<img src="images/cars/${car.img}" alt="暂无图片"  style="width:100px;height:80px"/>
+					<img src="images/cars/${car.img}" alt="No picture"  style="width:100px;height:80px"/>
 				</td>
 				<td><span id="cdes">${car.description}</span></td>
 				<td>
 					<c:if  test="${car.isrenting eq 0}">
-						<a href="javascript:;" onclick="rentCar('${car.carid}','${car.number}','${car.rentprice}')">租车</a>
+						<a href="javascript:;" onclick="rentCar('${car.carid}','${car.number}','${car.rentprice}')">Rent</a>
 					</c:if>
 					<c:if  test="${car.isrenting eq 1}">
-						<input type="button"  id="rentCar" value="已租"  disabled="disabled" />
+						<input type="button"  id="rentCar" value="Leased"  disabled="disabled" />
 					</c:if>
 				</td>
 			</tr>
