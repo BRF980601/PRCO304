@@ -6,10 +6,10 @@ $("#cprice,#crentprice,#cdeposit").blur(function(){
 	var content = $(this).val();
 	if(content==""){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>不能为空</span>");
+		$parent.append("<span class='formtips'>Can not be empty</span>");
 	}else if(!content.match(reg)){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>必须为数字</span>");
+		$parent.append("<span class='formtips'>Must be a number</span>");
 	}else{
 		$parent.children("span").remove();
 	}
@@ -22,10 +22,10 @@ $("#cidentity").blur(function(){
 	var content = $(this).val();
 	if(content==""){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>不能为空</span>");
+		$parent.append("<span class='formtips'>Can not be empty</span>");
 	}else if(!content.match(regex)){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>未知身份证号</span>");
+		$parent.append("<span class='formtips'>Unknown ID number</span>");
 	}else{
 		$parent.children("span").remove();
 	}
@@ -38,10 +38,10 @@ $("#cphone").blur(function(){
 	var content = $(this).val();
 	if(content==""){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>不能为空</span>");
+		$parent.append("<span class='formtips'>Can not be empty</span>");
 	}else if(!content.match(regex)){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>未知电话号码</span>");
+		$parent.append("<span class='formtips'>Unknown phone number</span>");
 	}else{
 		$parent.children("span").remove();
 	}
@@ -54,10 +54,10 @@ $("#cuserName,#cuserPassword").blur(function(){
 	var content = $(this).val();
 	if(content==""){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>不能为空</span>");
+		$parent.append("<span class='formtips'>Can not be empty</span>");
 	}else if(!content.match(regex)){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>英文或数字</span>");
+		$parent.append("<span class='formtips'>Letters or numbers</span>");
 	}else{
 		$parent.children("span").remove();
 	}
@@ -69,7 +69,7 @@ $("#ccarNumber,#ccarType,#ccarBrand,#crealname,#ccustName,#crealPay").blur(funct
 	var content = $(this).val();
 	if(content==""){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>不能为空</span>");
+		$parent.append("<span class='formtips'>Can not be empty</span>");
 	}else{
 		$parent.children("span").remove();
 	}
@@ -81,7 +81,7 @@ $("#priceShouldPay").blur(function(){
 	var content = $(this).val();
 	if(content==""){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>出租天数大于0</span>");
+		$parent.append("<span class='formtips'>Rental days are greater than 0</span>");
 	}else{
 		$parent.children("span").remove();
 	}
@@ -92,7 +92,7 @@ $("#ccarNumber,#ccarType,#ccarBrand,#crealname,#ccustName,#crealPay").blur(funct
 	var content = $(this).val();
 	if(content==""){
 		$parent.children("span").remove();
-		$parent.append("<span class='formtips'>不能为空</span>");
+		$parent.append("<span class='formtips'>Can not be empty</span>");
 	}else{
 		$parent.children("span").remove();
 	}
