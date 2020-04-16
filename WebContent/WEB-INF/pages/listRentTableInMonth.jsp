@@ -48,15 +48,15 @@
   	<c:if test="${not empty tables}">
     <table>
 		<tr>
-			<th>出租单编号</th>
-			<th>预付金</th>
-			<th>应付金</th>
-			<th>起租日期</th>
-			<th>应还日期</th>
-			<th>归还日期</th>
-			<th>客户身份证</th>
-			<th>车号</th>
-			<th>服务人员编号</th>
+			<th>Rent number</th>
+			<th>Advance payment</th>
+			<th>Payable</th>
+			<th>Begin data</th>
+			<th>End data</th>
+			<th>Real end data</th>
+			<th>Customer id</th>
+			<th>Car number</th>
+			<th>Staff number</th>
 		</tr>
 	
 		<c:forEach items="${tables}" var="table" >
@@ -75,7 +75,7 @@
 	</table>
 	</c:if>
 	<c:if test="${empty tables}">
-		<h3 align="center" style="color: red">***********************************当月没有还车********************************</h3>
+		<h3 align="center" style="color: red">***********************************No car returned********************************</h3>
 	</c:if>
   </div>
 </div>

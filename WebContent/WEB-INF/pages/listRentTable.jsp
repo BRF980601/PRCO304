@@ -42,7 +42,7 @@
     </style>
 <script type="text/javascript">
 	function deleteTable(rentTableId){
-		var flag = window.confirm("确认要废弃这个出租单？");
+		var flag = window.confirm("Are you sure you want to scrap this rental slip?");
 		if(flag){
 			$.ajax({
 				type:"post",
@@ -53,7 +53,7 @@
 					if(data.flag == "true"){
 						$("tr#"+rentTableId).remove();
 					}else{
-						alert("废弃失败！");
+						alert("Abandonment failed!");
 					}
 				}
 			})
@@ -70,7 +70,7 @@
 				if(data.flag == "true"){
 					$("tr td"+rentTableId+" td").remove();
 				}else{
-					alert("废弃失败！");
+					alert("Abandonment failed！");
 				}
 			}
 		})
@@ -84,17 +84,17 @@
   <div class="body-content">
     <table>
 		<tr>
-			<th>出租单编号</th>
-			<th>预付金</th>
-			<th>应付金</th>
-			<th>起租日期</th>
-			<th>应还日期</th>
-			<th>归还日期</th>
-			<th>客户身份证</th>
-			<th>车号</th>
-			<th>服务人员编号</th>
-			<th>出租单状态</th>
-			<th>操作</th>
+			<th>Rent number</th>
+			<th>Advance payment</th>
+			<th>Payable</th>
+			<th>Begin data</th>
+			<th>End data</th>
+			<th>Real end data</th>
+			<th>Customer id</th>
+			<th>Car number</th>
+			<th>Staff number</th>
+			<th>Rental order status</th>
+			<th>Operating</th>
 		</tr>
 		<c:forEach items="${tables}" var="table" >
 			<tr id="${table.rentid}">
@@ -109,28 +109,28 @@
 				<td>${table.userName}</td>
 				<c:if test="${table.rentFlag eq 1}">
 					<td>
-						已出租
+						Leased
 					</td>
 					<td>
 						<input type="hidden" name="rentid" id="rentTableId" value="${table.rentid}" />
-						<a href="javascript:void(0)"  onclick="deleteTable('${table.rentid}')" >作废</a> | 
-						<a href="preUpdateRentTable?rentid=${table.rentid}" >修改</a>
+						<a href="javascript:void(0)"  onclick="deleteTable('${table.rentid}')" >Void</a> | 
+						<a href="preUpdateRentTable?rentid=${table.rentid}" >Modify</a>
 					</td>
 				</c:if>
 				<c:if test="${table.rentFlag eq 2}">
 					<td>
-						<font color="green" >已结算</font>
+						<font color="green" >Settled</font>
 					</td>
 					<td>
-						作废  | 修改
+						Obsolete | Modify
 					</td>
 				</c:if>
 				<c:if test="${table.rentFlag eq 3}">
 					<td>
-						<font color="red" >已废弃</font>
+						<font color="red" >cObsolete</font>
 					</td>
 					<td>
-						作废  | 修改
+						Obsolete | Modify
 					</td>
 				</c:if>
 			</tr>

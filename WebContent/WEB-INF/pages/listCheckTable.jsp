@@ -50,13 +50,13 @@
   <div class="body-content">
     <table>
 		<tr>
-			<th>检查单编号</th>
-			<th>检查问题</th>
-			<th>赔付金</th>
-			<th>备注</th>
-			<th>检查时间</th>
-			<th>操作人员姓名</th>
-			<th>操作</th>
+			<th>Check list number</th>
+			<th>Check the problem</th>
+			<th>Compensation</th>
+			<th>Remarks</th>
+			<th>Check data</th>
+			<th>Operator's name</th>
+			<th>Operating</th>
 		</tr>
 		<c:forEach items="${checktables}" var="table" >
 			<tr >
@@ -67,7 +67,7 @@
 				<td>${table.checktime}</td>
 				<td>${table.username}</td>
 				<td>
-					<a href="preUpdateCheckTable?checkid=${table.checkid}" >修改</a>
+					<a href="preUpdateCheckTable?checkid=${table.checkid}" >Modify</a>
 				</td>
 			</tr>
 		</c:forEach>
