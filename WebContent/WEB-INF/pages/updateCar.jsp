@@ -39,46 +39,46 @@
     <input type="hidden" name="carId" value="${car.carid}" /> 
       <table>
 			<tr>
-				<td width="100px">车号</td>
+				<td width="100px">Car number</td>
 				<td width="300px"> <input type="text" name="number"  id="ccarNumber" value="${car.number}" class="required" />* </td>
-				<td width="100px">汽车型号</td>
+				<td width="100px">Car type</td>
 				<td width="300px"> <input type="text" name="type" id="ccarType" value="${car.type}" class="required" /> * </td>
 			</tr>
 			<tr>
-				<td>颜色</td>
+				<td>Color</td>
 				<td> <input type="text" name="color" id="ccolor" value="${car.color}"/> </td>
-				<td>价值</td>
+				<td>Price</td>
 				<td> <input type="text" name="price" id="cprice" value="${car.price}" class="required"/> * </td>
 			</tr>
 			<tr>
-				<td>租金</td>
+				<td>Rent price</td>
 				<td> <input type="text" name="rentprice" id="crentprice" value="${car.rentprice}" class="required"/> * </td>
-				<td>押金</td>
+				<td>Deposit</td>
 				<td> <input type="text" name="deposit" id="cdeposit" value="${car.deposit}" class="required"/>* </td>
 			</tr>
 			<tr>
-				<td>租用情况</td>
+				<td>Lease situation</td>
 				<td>
 					<select name="isrenting" id="crenting">
 						<c:if test="${car.isrenting eq 0}" >
-							<option value="0" selected="selected" >未出租</option>
-							<option value="1">已出租</option>
+							<option value="0" selected="selected" >Not leased</option>
+							<option value="1">Leased</option>
 						</c:if>
 						<c:if test="${car.isrenting eq 1}" >
-							<option value="0" >未出租</option>
-							<option value="1"  selected="selected">已出租</option>
+							<option value="0" >Not leased</option>
+							<option value="1"  selected="selected">Leased</option>
 						</c:if> 
 					</select>
 				</td>
-				<td width="100px">汽车品牌</td>
+				<td width="100px">Brand</td>
 				<td> <input type="text" name="brand" id="ccarBrand" value="${car.brand}" class="required" /> * </td>
 			</tr>
 			<tr>
-				<td>上传汽车图片</td>
+				<td>Upload car picture</td>
 				<td colspan="3"> <input type="file" name="imgFile" id="cimg" /> </td>
 			</tr>
 			<tr>
-				<td>简介</td>
+				<td>Introduction</td>
 				<td colspan="3">
 				<div class="form-group">
         		<div class="field">
@@ -93,7 +93,7 @@
           <label></label>
         </div>
         <div class="field">
-          <button class="button bg-main icon-check-square-o" type="submit" id="dataSub"> 提交</button>
+          <button class="button bg-main icon-check-square-o" type="submit" id="dataSub"> Submit</button>
         </div>
       </div>
     </form>

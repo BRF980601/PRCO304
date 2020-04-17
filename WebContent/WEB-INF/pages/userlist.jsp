@@ -58,17 +58,17 @@
   <div class="body-content">
     <table >
 		<tr>
-			<th>序号</th>
-			<th>用户名</th>
-			<th>密码</th>
-			<th>真实姓名</th>
-			<th>身份证号</th>
-			<th>性别</th>
-			<th>地址</th>
-			<th>电话</th>
-			<th>职位</th>
-			<th>角色</th>
-			<th>操作</th>
+			<th>User id</th>
+			<th>User name</th>
+			<th>Password</th>
+			<th>Real name</th>
+			<th>ID</th>
+			<th>Gender</th>
+			<th>Address</th>
+			<th>Phone number</th>
+			<th>Career</th>
+			<th>Role name</th>
+			<th>Operation</th>
 		</tr>
 		<c:forEach items="${users}" var="user" >
 			<tr>
@@ -83,8 +83,8 @@
 				<td>${user.position}</td>
 				<td>${user.role.rolename}</td>
 				<td>
-					<a href="deleteById?userid=${user.userid}" >删除</a> |
-					<a href="preUpdateUser?userid=${user.userid}">修改</a>
+					<a href="deleteById?userid=${user.userid}" >Delete</a> |
+					<a href="preUpdateUser?userid=${user.userid}">Modify</a>
 				</td>
 			</tr>
 		</c:forEach>

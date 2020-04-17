@@ -49,18 +49,18 @@
   <div class="body-content">
     <table >
 		<tr>
-			<th>序号</th>
-			<th>出租单编号</th>
-			<th>预付金</th>
-			<th>应付金</th>
-			<th>实际支付</th>
-			<th>起租日期</th>
-			<th>应归还日期</th>
-			<th>实际归还日期</th>
-			<th>客户姓名</th>
-			<th>车牌号</th>
-			<th>服务人员编号</th>
-			<th>操作</th>
+			<th>Rent id</th>
+			<th>Rent number</th>
+			<th>Imprest</th>
+			<th>Payable</th>
+			<th>Real pay</th>
+			<th>Begin data</th>
+			<th>End data</th>
+			<th>Real end data</th>
+			<th>Customer name</th>
+			<th>Car number</th>
+			<th>Staff id</th>
+			<th>Operating</th>
 		</tr>
 		<c:forEach items="${renttables}" var="renttable" >
 		<!-- items="${renttables}" var="renttable" 正好对应下面的${.} -->
@@ -77,7 +77,7 @@
 				<td>${renttable.user}</td>
 				<td>${renttable.carid}</td>
 				<td>
-					<a href="deleteById?userid=${user.userid}" />删除</a> | 
+					<a href="deleteById?userid=${user.userid}" />Delete</a> | 
 					<a href="preUpdate?userid=${user.userid}
 					          &username=${user.username}
 					           &userpwd=${user.userpwd}
@@ -87,7 +87,7 @@
 					             &address=${user.address}
 					             &phone=${user.phone}
 					              &position=${user.position}
-					            &roleid=${user.roleid}" />修改</a>
+					            &roleid=${user.roleid}" />Modify</a>
 				</td>
 			</tr>
 		</c:forEach>

@@ -23,10 +23,7 @@ h1{
  <script src="js/jquery.js"></script>
 </head>
 <body>
-	<h1>操</h1>
-	<h1>作</h1>
-	<h1>成</h1>
-	<h1>功</h1>
-	<h1>！</h1>
+	<h1>Successful operation!</h1>
+	
 </body>
 </html>

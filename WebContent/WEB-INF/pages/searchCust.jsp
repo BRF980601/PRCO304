@@ -41,8 +41,8 @@
 		$("#sub-search").click(function() {
 			$("#tab-select-custs tr").remove(); 
 			var content = null;
-			var content2 ="<tr ><td >客户编号</td><td>客户姓名</td><td >密码</td><td >性别</td><td >身份证号</td>"+
-			"<td >手机电话</td><td >职业</td><td >住址</td><td colspan='2' style='width:500px'>操作</td></tr>";
+			var content2 ="<tr ><td >Customer id</td><td>Customer name</td><td >Password</td><td >Gender</td><td >ID</td>"+
+			"<td >Phone number</td><td >Career</td><td >Address</td><td colspan='2' style='width:500px'>Operating</td></tr>";
 			$.ajax({
 				type : "post",
 				url : "findCusts",
@@ -61,8 +61,8 @@
 								"<td > <input type='text' id='cphone'  class='info'   disabled='true' value='"+custs[i].phone+"'/> </td>"+ 
 								"<td > <input type='text' id='ccareer' style='width:60px'   class='info'   disabled='true' value='"+custs[i].career+"'/> </td>"+ 
 								"<td > <input type='text' id='caddress' class='info'   disabled='true'  value='"+custs[i].address+"'/> </td>"+  
-								"<td > <input type='button' id='sub-deletecust' class='sub-deletecust'  value='删除' onclick='deleteTr("+this+")' /> </td>"+  
-								"<td > <input type='button' id='sub-updatecust' class='sub-updatecust' value='修改'/> </td></tr>" 
+								"<td > <input type='button' id='sub-deletecust' class='sub-deletecust'  value='Delete' onclick='deleteTr("+this+")' /> </td>"+  
+								"<td > <input type='button' id='sub-updatecust' class='sub-updatecust' value='Modify'/> </td></tr>" 
 							$("#tab-select-custs").append(content);
 						} 
 						
@@ -77,10 +77,10 @@
 								success : function(data) {
 									//location.href = "searchCust";
 									if (data.flag == "ok") {
-										alert("删除成功!");
+										alert("successfully deleted!");
 										//location.href = "searchCust";
 									} else if (data.flag == "error") {
-										alert("删除失败!");
+										alert("failed to delete!");
 									}
 								}
 							}); 
@@ -100,7 +100,7 @@
 								$(this).parents("tr").children().eq(5).eq(0).children().attr("disabled",false);
 								$(this).parents("tr").children().eq(6).eq(0).children().attr("disabled",false);
 								$(this).parents("tr").children().eq(7).eq(0).children().attr("disabled",false);
-								$(this).attr("value","继续");
+								$(this).attr("value","Continue");
 							}else{
 								flagUpdateBtn=0;
 								
@@ -111,7 +111,7 @@
 								$(this).parents("tr").children().eq(5).eq(0).children().attr("disabled",true);
 								$(this).parents("tr").children().eq(6).eq(0).children().attr("disabled",true);
 								$(this).parents("tr").children().eq(7).eq(0).children().attr("disabled",true);
-								$(this).attr("value","修改");
+								$(this).attr("value","Modify");
 								
 						 	  $.ajax({
 									type : "post",
@@ -130,15 +130,15 @@
 									success : function(data) {
 										
 										if (data.flag == "list") {
-											alert("更新成功!");
+											alert("Update completed!");
 											location.href = "searchCust";
 										} else if (data.flag == "error") {
-											alert("更新失败!");
+											alert("Update failed!");
 										}
 									}
 								});  
 						 	  
-						 	 alert("更新成功!"); 
+						 	 alert("Update completed!"); 
 							}
 						});  
 						}
@@ -160,17 +160,17 @@
 <body >
 	<div class="panel admin-panel">
 		<div class="panel-head">
-			<strong><span class="icon-pencil-square-o"></span> 查询客户信息</strong>
+			<strong><span class="icon-pencil-square-o"></span> Query customer information</strong>
 		</div>
 		<div class="body-content">
 			<div class="">
 				<div class="field" style="vertical-align: center;padding-top: 10pt; " align="center">
 					User name：<input type="text" id="search-name" class="inputadd"
 						name="sub-search" value="" style="width:7%;height: 20pt;" /> &nbsp;&nbsp;
-					身份证号：<input type="text" id="search-identity" class="inputadd"
+					Id:<input type="text" id="search-identity" class="inputadd"
 						name="sub-search" value="" style="width:10%;height: 20pt;" /> 
 					<input type="submit" id="sub-search" class="sub-search" name="sub-search"
-					 style="width: 5%; vertical-align: center;height: 20pt;" value="查询" />
+					 style="width: 5%; vertical-align: center;height: 20pt;" value="Inquire" />
 				</div>
 			</div>
 				<table id="tab-select-custs">

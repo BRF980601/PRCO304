@@ -39,16 +39,16 @@
   <div class="body-content">
     <form method="post" class="form-x" action="findUsers">
     	<div id="body-content-form">
-    		<div>登陆名：<input type="text" name="username" id="uname" /> * </div><br/>
-    		<div>身份证：<input type="text" name="identity" id="uidentity" /> * </div><br/>
-    		<div>联系电话：<input type="text" name="phone" id="uphone" /> * </div><br/>
+    		<div>User name:<input type="text" name="username" id="uname" /> * </div><br/>
+    		<div>ID:<input type="text" name="identity" id="uidentity" /> * </div><br/>
+    		<div>Phone number:<input type="text" name="phone" id="uphone" /> * </div><br/>
     	</div>
           <div class="form-group">
         <div class="label">
           <label></label>
         </div>
         <div class="field">
-          <button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+          <button class="button bg-main icon-check-square-o" type="submit"> Submit</button>
         </div>
       </div>
     </form>

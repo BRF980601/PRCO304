@@ -64,22 +64,22 @@
    <div class="body-content">
 	<form action="findLoginlog" method="post">
 	<div class="search-content">
-		<span class="newfont06">用户名称 : </span>
+		<span class="newfont06">User name: </span>
 		<input name="username" class="search-value" type="text" size="12" value="${username }"  />&emsp; 
-		<input name="Submit" type="submit" class="search-sub" value="查 询" />&nbsp;
+		<input name="Submit" type="submit" class="search-sub" value="Inquire" />&nbsp;
 	</div>
 	
 	<br />
 	<table width="100%" border="1px" cellpadding="4">
 		<tr>
 			<th height="20" colspan="15" align="center"
-				>登录日志列表</th>
+				>Login log list</th>
 		</tr>
 		<tr>
-			<th width="9%" height="20" align="center" bgcolor="#EEEEEE">编号</th>
-			<th width="9%" align="center" bgcolor="#EEEEEE">用户名</th>
-			<th width="9%" align="center" bgcolor="#EEEEEE">用户ip地址</th>
-			<th width="9%" align="center" bgcolor="#EEEEEE">登录时间</th>
+			<th width="9%" height="20" align="center" bgcolor="#EEEEEE">Number</th>
+			<th width="9%" align="center" bgcolor="#EEEEEE">User name</th>
+			<th width="9%" align="center" bgcolor="#EEEEEE">User ip address</th>
+			<th width="9%" align="center" bgcolor="#EEEEEE">Log in time</th>
 		</tr>
 		<c:forEach items="${mpb.list}" var="loginlog">
 			<tr>
@@ -91,12 +91,12 @@
 		</c:forEach>
 		<tr>
     		<td colspan="11" align="center">
-    			<a href="javascript:change(1,${mpb.size },'${username}')">首页</a>
+    			<a href="javascript:change(1,${mpb.size },'${username}')">Inder</a>
 	    		<c:if test="${mpb.index !=1 }">
-	    			<a href="javascript:change(${mpb.index-1 },${mpb.size },'${username}')">上一页</a>
+	    			<a href="javascript:change(${mpb.index-1 },${mpb.size },'${username}')">Previous page</a>
 	    		</c:if>
 	    		<c:if test="${mpb.index ==1 }">
-	    			上一页
+	    			Previous page
 	    		</c:if>
 	    		<c:forEach items="${mpb.numbers }" var="number">
 	    			<c:if test="${number == mpb.index }">
@@ -108,15 +108,15 @@
 	    		</c:forEach>
 	    		
 	    		 <c:if test="${mpb.index != mpb.totalPageCount }">
-	    			<a href="javascript:change(${mpb.index+1 },${mpb.size },'${username}')">下一页</a>
+	    			<a href="javascript:change(${mpb.index+1 },${mpb.size },'${username}')">Next page</a>
 	    		</c:if>
 	    		<c:if test="${mpb.index == mpb.totalPageCount }">
-	    			下一页
+	    			Next page
 	    		</c:if>   
 	    		 
-	    		<a href="javascript:change(${mpb.totalPageCount },${mpb.size },'${username}')">末页</a>
+	    		<a href="javascript:change(${mpb.totalPageCount },${mpb.size },'${username}')">Last page</a>
 	    		 
-	    		每页   
+	    		Each page 
 	    		<select onchange="change(1,this.value,'${username}')" id="size">
 	    			<c:forEach begin="5" step="5" end="30" var="i">
 	    				<c:if test="${i == mpb.size }">
@@ -127,13 +127,13 @@
 	    				</c:if>
 	    			</c:forEach>
 	    		</select>
-	    		 条记录
+	    		 records
 	    		 
-	    		 直接跳到第<input type="text" name="index" size="1">页
+	    		 Jump to<input type="text" name="index" size="1">page
 	    		 		<input type="hidden" name="size" value="${mpb.size }">
 	    		 		<input type="submit" value="go">
 	    		  
-	    		共${mpb.totalCount }条记录
+	    		Total${mpb.totalCount }records
     		</td>
     	</tr>
 		</table>

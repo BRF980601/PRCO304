@@ -56,45 +56,45 @@
 
      <table>
 			<tr>
-				<td width="100px">登陆名</td>
+				<td width="100px">User name</td>
 				<td width="300px"> <input type="text" name="username" id="cuserName" value="${user.username}" class="required" /> * </td>
-				<td width="100px">身份证</td>
+				<td width="100px">ID</td>
 				<td width="300px"> <input type="text" name="identity" id="cidentity" value="${user.identity}" class="required" /> * </td>
 			</tr>
 			<tr>
-				<td>用户密码</td>
+				<td>Password</td>
 				<td> <input type="text" name="userpwd" id="cuserPassword" value="${user.userpwd}"  class="required" />  </td>
-				<td>联系电话</td>
+				<td>Phone number</td>
 				<td> <input type="text" name="phone" id="cphone"value="${user.phone}" class="required" /> * </td>
 			</tr>
 			<tr>
-				<td>地址</td>
+				<td>Address</td>
 				<td> <input type="text" name="address" id="uaddress" value="${user.address}"/> </td>
-				<td>性别</td>
+				<td>Gender</td>
 				<td>
-					<c:if test="${user.sex eq '男'}">
+					<c:if test="${user.sex eq 'male'}">
 						<select name="sex">
- 							<option value="男" selected="selected">男</option>
- 							<option value="女">女</option>
+ 							<option value="male" selected="selected">male</option>
+ 							<option value="female">female</option>
 						</select>
 					</c:if>
-					<c:if test="${user.sex eq '女'}">
+					<c:if test="${user.sex eq 'female'}">
 						<select name="sex">
- 							<option value="男" >男</option>
- 							<option value="女" selected="selected">女</option>
+ 							<option value="male" >male</option>
+ 							<option value="female" selected="selected">female</option>
 						</select>
 					</c:if>
 				 * </td>
 			</tr>
 
 			<tr>
-				<td>真实姓名</td>
+				<td>Real name</td>
 				<td> <input type="text" name="realname" id="crealname" value="${user.realname}" class="required" /> * </td>
-				<td>职位</td>
+				<td>Career</td>
 				<td> <input type="text" name="position" id="uposition"  value="${user.position}"/></td>
 			</tr>
 			<tr>
-				<td>角色</td>
+				<td>Role name</td>
 				<td>
 					<select name="roleid" id="crenting">
 					</select>
@@ -104,7 +104,7 @@
 			</tr>
 		</table>
         <div class="field">
-          <button class="button bg-main icon-check-square-o" type="submit" id="dataSub"> 提交</button>
+          <button class="button bg-main icon-check-square-o" type="submit" id="dataSub"> Submit</button>
         </div>
     </form>
   </div>

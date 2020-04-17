@@ -40,15 +40,15 @@
     <form method="post" class="form-x" action="updataRole.do">
     	<h2>
     	<div align="center">
-    		角色名称：
+    		Role name
 			<input type="text" name="rolename" value="${role.rolename }"/> * 
 			<input type="hidden" name="roleid" value="${role.roleid }"/> * 
     	</div>
     	</h2>
       <table border="1px">
 			<tr>
-				<th  align="center"  >选择</th>
-				<th  align="center" > 权限名称</th>
+				<th  align="center"  >Select</th>
+				<th  align="center" > Permission name</th>
 			</tr>
 				 <c:forEach items="${menus }" var="m">
 				 	<c:set var="count" value="${0 }"></c:set>
@@ -89,7 +89,7 @@
 			<tr>
 				<div class="field">
 				<td width="100px" colspan="2" align="center">
-          		<button class="button bg-main icon-check-square-o" type="submit"> 提交</button>
+          		<button class="button bg-main icon-check-square-o" type="submit"> Submit</button>
           		</td>
         		</div>
 			</tr>

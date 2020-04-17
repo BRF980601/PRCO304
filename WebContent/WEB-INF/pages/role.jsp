@@ -57,7 +57,7 @@
 <script src="js/jquery.js"></script>
   <script type="text/javascript">
 	function deleteConfirm(obj){
-		var flag = window.confirm("您确定要删除吗？");
+		var flag = window.confirm("Are you sure you want to delete it?");
 		if (flag) {
 			window.location.href=("deleteRole?roleid="+obj);
 		}
@@ -78,10 +78,10 @@
    <div class="body-content">
    	<form action="findRoleByName" method="post" id="findRoleForm">
 	   	<div class="search-content">
-			<span class="newfont06">用户名称 : </span>
+			<span class="newfont06">User name: </span>
 			<input name="rolename" class="search-value" type="text" size="12" value="${rolename }"  />&emsp; 
-			<a href="javascript:;" class="myButton" id="subHref">查询</a>&nbsp;
-			<a href="showMenu" class="myButton">添加角色</a>
+			<a href="javascript:;" class="myButton" id="subHref">Inquire</a>&nbsp;
+			<a href="showMenu" class="myButton">Add roles</a>
 		</div>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		</table>
@@ -92,11 +92,11 @@
 			<th colspan="5">Role list</th>
 		</tr>
 		<tr>
-			<th >选择</th>
-			<th >编号</th>
-			<th >角色名</th>
-			<th >编辑</th>
-			<th >删除</th>
+			<th >Select</th>
+			<th >Number</th>
+			<th >Role name</th>
+			<th >Modify</th>
+			<th >Delete</th>
 		</tr>
 		<c:forEach items="${roles}" var="role">
 			<tr>
@@ -104,8 +104,8 @@
 			<td>${role.roleid }</td>
 			<td>${role.rolename }</td>
 			<td><a href="showRoleMenu?roleid=${role.roleid }&rolename=${role.rolename }">
-			编辑</a></td>
-			<td ><a href="javascript:void(0)" onclick="deleteConfirm(${role.roleid});">删除</a></td>
+			Modify</a></td>
+			<td ><a href="javascript:void(0)" onclick="deleteConfirm(${role.roleid});">Delete</a></td>
 		</tr>
 		</c:forEach>
 	</table>

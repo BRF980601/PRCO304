@@ -144,7 +144,7 @@
 			<th>Car type</th>
 			<th>Brand</th>
 			<th>Color</th>
-			<th>Price(puonds)</th>
+			<th>Price(pounds)</th>
 			<th>Rent price</th>
 			<th>Deposit</th>
 			<th>Lease situation</th>
