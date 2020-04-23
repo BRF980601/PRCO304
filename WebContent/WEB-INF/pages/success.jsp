@@ -23,7 +23,6 @@ h1{
  <script src="js/jquery.js"></script>
 </head>
 <body>
-	<h1>Successful operation!</h1>
-	
+	<h1><td style="text-align:center">Successful operation!</td><h1>
 </body>
 </html>

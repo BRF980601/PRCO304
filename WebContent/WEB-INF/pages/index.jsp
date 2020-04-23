@@ -28,19 +28,19 @@
 </div>
 <div class="leftnav">
   <div class="leftnav-title"><strong><span class="icon-list"></span>Menu list</strong></div>
-  <c:forEach items="${menus }" var="m">
+  <c:forEach items="${menus}" var="m">
   	<c:choose>
-  		<c:when test="${m.menuId eq 1 }">
+  		<c:when test="${m.menuId eq 1}">
   		</c:when>
-  		<c:when test="${m.parentid eq 1 }">
-  			<h2><span class="icon-user"></span>${m.name }</h2>
+  		<c:when test="${m.parentid eq 1}">
+  			<h2><span class="icon-user"></span>${m.name}</h2>
   			<c:set var="flag" value="true"></c:set>
   		</c:when>
   		<c:otherwise>
-  			<c:if test="${flag eq true }">
+  			<c:if test="${flag eq true}">
   				  <ul style="display:block"></ul>
   			</c:if>
-  			 <li><a href="${m.url}" target="right"><span class="icon-caret-right"></span>${m.name }</a></li>
+  			 <li><a href="${m.url}" target="right"><span class="icon-caret-right"></span>${m.name}</a></li>
   		</c:otherwise>
   	</c:choose>
   </c:forEach>

@@ -58,9 +58,9 @@
   <div class="body-content">
     <table >
 		<tr>
-			<th>User id</th>
-			<th>User name</th>
-			<th>Password</th>
+			<th>Staff id</th>
+			<th>Staff name</th>
+			<th>Staff Password</th>
 			<th>Real name</th>
 			<th>ID</th>
 			<th>Gender</th>

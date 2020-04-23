@@ -55,13 +55,13 @@
     <form method="post" class="form-x" action="addUser">
       <table>
 			<tr>
-				<td width="100px">Login name</td>
+				<td width="100px">Staff name</td>
 				<td width="300px"> <input type="text" name="username" id="cuserName" class="required"   /> * </td>
 				<td width="100px">ID</td>
 				<td width="300px"> <input type="text" name="identity" id="cidentity" class="required"   /> * </td>
 			</tr>
 			<tr>
-				<td>User password</td>
+				<td>Staff password</td>
 				<td> <input type="password" name="userpwd" id="cuserPassword" class="required"  /> * </td>
 				<td>Phone number</td>
 				<td> <input type="text" name="phone" id="cphone" class="required"  /> * </td>
@@ -72,8 +72,8 @@
 				<td>Gender</td>
 				<td>
 				<select name="sex" >
-					<option value="男">male</option>
-					<option value="女">female</option>
+					<option value="male">male</option>
+					<option value="female">female</option>
 				</select> 
 				 </td>
 			</tr>
@@ -81,7 +81,7 @@
 			<tr>
 				<td>Real name</td>
 				<td> <input type="text" name="realname" id="crealname" class="required"   /> * </td>
-				<td>Position</td>
+				<td>Career</td>
 				<td> <input type="text" name="position" id="uposition" /> </td>
 			</tr>
 			<tr>
