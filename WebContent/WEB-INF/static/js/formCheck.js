@@ -33,7 +33,7 @@ $("#cidentity").blur(function(){
 
 /* 电话号码验证  */
 $("#cphone").blur(function(){
-	var regex = /^1[34578]\d{9}$/;
+	var regex = /^0[1-9]\d{9}$/;
 	var $parent = $(this).parent();
 	var content = $(this).val();
 	if(content==""){

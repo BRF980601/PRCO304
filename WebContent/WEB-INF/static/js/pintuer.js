@@ -3,7 +3,7 @@ $(function(){
         if(document.all){
         document.body.style.behavior = 'url(#default#homepage)'; 
         document.body.setHomePage(document.URL); 
-        }else{alert("设置首页失败，请手动设置！");} 
+        }else{alert("Failed to set the homepage, please set it manually!");} 
 	});
 	$(".win-favorite").click(function(){
 		var sURL=document.URL; 
@@ -11,7 +11,7 @@ $(function(){
 		try {window.external.addFavorite(sURL, sTitle);} 
 		catch(e){ 
 			try{window.sidebar.addPanel(sTitle, sURL, "");} 
-			catch(e){alert("加入收藏失败，请使用Ctrl+D进行添加");} 
+			catch(e){alert("Add to favorites failed, please use Ctrl + D to add");} 
 		}
 	});
 	$(".win-forward").click(function(){

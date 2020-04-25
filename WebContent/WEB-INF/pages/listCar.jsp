@@ -76,6 +76,7 @@
 			<th>picture</th>
 			<th style="width:200px">Introduction</th>
 			<th>Operating</th>
+			<th>Problem</th>>
 		</tr>
 		<c:forEach items="${cars}" var="car" >
 			<tr>
@@ -102,6 +103,7 @@
 					<a href="javascript:void(0)" onclick="deleteCar('${car.carid}')" id="del" >delete</a> | 
 					<a href="preUpdateCar?carId=${car.carid}" >modify</a>
 				</td>
+				<td>broken</td>
 			</tr>
 		</c:forEach>
 	</table>

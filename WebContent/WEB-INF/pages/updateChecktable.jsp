@@ -48,32 +48,32 @@
     <form  action="updateChecktable"  method="post">
 		<table>
 			<tr>
-				<td>检查单号：</td>
+				<td>Check list number：</td>
 				<td><input type="text" name="checkno" readonly="readonly" value="${checktable.checkno}" /></td>
-				<td>检查时间：</td>
+				<td>Check data：</td>
 				<td><input type="text" name="checktime" readonly="readonly" value="${checktable.checktime}"  /></td>
 			</tr>
 			<tr>
-				<td>检查员姓名：</td>
+				<td>Operator's name：</td>
 				<td><input type="text" name="username" readonly="readonly" value="${checktable.username}" /></td>
-				<td>出租单编号：</td>
+				<td>Rent id：</td>
 				<td><input type="text" name="rentid" readonly="readonly" value="${checktable.rentid}" /></td>
 				
 			</tr>
 			<tr>
-				<td>备注：</td>
+				<td>Remarks：</td>
 				<td><input type="text" name="type" value="${checktable.type}" /></td>
-				<td>赔费：</td>
+				<td>Compensation：</td>
 				<td><input type="text" name="paying" value="${checktable.paying}" /></td>
 			</tr>
 			<tr>
-				<td>车辆问题：</td>
+				<td>Problem：</td>
 				<td ><input type="text" name="problem" value="${checktable.problem}" /></td>
-				<td>检查单状态</td>
+				<td>Checklist status</td>
 				<td>
 					<select name="flag">
-						<option value="1">正常</option>
-						<option value="0">损坏</option>
+						<option value="1">Normal</option>
+						<option value="0">Damage</option>
 					</select>
 				</td>
 			</tr>
@@ -83,11 +83,11 @@
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="submit" value="修改" id="send" />
+				<input type="submit" value="Modify" id="send" />
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<input type="reset" value="重置" /></td>
+				<input type="reset" value="Reset" /></td>
 				<td></td>
 			</tr>
 		</table>
@@ -99,31 +99,31 @@
 			<td colspan="6" class="tableInfo">Car order information</td>
 		</tr>
 			<tr>
-				<td>出租单编号</td>
+				<td>Rent id</td>
 				<td>${table.rentNo}</td>
-				<td>预付金</td>
+				<td>Advance payment</td>
 				<td>${table.imprest}</td>
 			</tr>
 			<tr>
-				<td>应付金额</td>
+				<td>Amounts payable</td>
 				<td>${table.pricePayAble}</td>
-				<td>实际交付金额</td>
+				<td>Real pay</td>
 				<td>${table.realPay}元</td>
 			</tr>
 			<tr>
-				<td>起租日期</td>
+				<td>Begin data</td>
 				<td>${table.beginTime}</td>
-				<td>应还日期</td>
+				<td>End data</td>
 				<td>${table.endTime}</td>
 			</tr>
 			<tr>
-				<td>服务人员编号</td>
+				<td>Staff number</td>
 				<td>
 					${currentUser.username}
 				</td>
-				<td>出租单状态</td>
+				<td>Rental order status</td>
 				<td>
-					已出租
+					Leased
 				</td>
 			</tr>
 		</table>
@@ -133,19 +133,19 @@
 			<td colspan="6" class="tableInfo">Customer Information</td>
 		</tr>
 		<tr>
-			<td>身份证</td>
+			<td>ID</td>
 			<td>${customer.identity}</td>
-			<td>姓名</td>
+			<td>name</td>
 			<td>${customer.name}</td>
-			<td>性别</td>
+			<td>Gender</td>
 			<td>${customer.sex}</td>
 		</tr>
 		<tr>
-			<td>地址</td>
+			<td>Address</td>
 			<td>${customer.address}</td>
-			<td>电话</td>
+			<td>Phone</td>
 			<td>${customer.phone}</td>
-			<td>职业</td>
+			<td>Career</td>
 			<td>${customer.career}</td>
 		</tr>
 	</table>
@@ -155,32 +155,32 @@
 			<td colspan="6" class="tableInfo">Car information</td>
 		</tr>
 		<tr>
-			<td>车号</td>
+			<td>Car number</td>
 			<td>${car.number}</td>
-			<td>型号</td>
+			<td>Car type</td>
 			<td>${car.type}</td>
-			<td>颜色</td>
+			<td>Color</td>
 			<td>${car.color}</td>
 		</tr>
 		<tr>
-			<td>价值</td>
+			<td>Price</td>
 			<td>${car.price}</td>
-			<td>租金</td>
+			<td>Rent price</td>
 			<td>${car.rentprice}</td>
-			<td>押金</td>
+			<td>Deposit</td>
 			<td>${car.deposit}</td>
 		</tr>
 		<tr>
-			<td>租用情况</td>
+			<td>Lease situation</td>
 			<td>
 			<c:if test="${car.isrenting eq 0}">
-					未出租
+					Not leased
 				</c:if>
 				<c:if test="${car.isrenting eq 1}">
-					已出租
+					Leased
 				</c:if>
 			</td>
-			<td cospan="2">简介</td>
+			<td cospan="2">Description</td>
 			<td>${car.description}</td>
 		</tr>
 	</table>

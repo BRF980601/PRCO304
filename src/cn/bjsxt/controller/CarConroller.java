@@ -241,6 +241,8 @@ public class CarConroller {
 		}
 		map.put("isrenting", isrenting);
 		
+//		String problem =req.get
+		
 		List<Car> cars =  carService.findCar(map);
 		if(cars.size()>0){
 			req.setAttribute("cars", cars);

@@ -27,10 +27,7 @@
 
 		$("#send").click(function() {
 			$("input.required").trigger("blur");
-			var numError = $(".formtips").length;
-			if(numError){
-				return false;
-			}
+		
 			$.ajax({
 				type : "post",
 				url : "insertCustomer",
@@ -77,15 +74,15 @@ td{
 		<table>
 			<tr>
 				<td width="100px">Customer name</td>
-				<td width="300px"> <input type="text" id="custName"  name="cust-name" class="required" /> * </td>
+				<td width="300px"> <input type="text" id="custName"  name="name" class="required" /> * </td>
 				<td width="100px">ID</td>
-				<td > <input type="text" id="cidentity"  name="cust-identity" class="required"   /> * </td>
+				<td > <input type="text" id="cidentity"  name="identity" class="required"   /> * </td>
 			</tr>
 			<tr>
 				<td width="100px">Password</td>
-				<td> <input type="password" id="cuserPassword"  name="cust-pwd" class="required"  /> * </td>
+				<td> <input type="password" id="cuserPassword"  name="pwd" class="required"  /> * </td>
 				<td>Gender:</td>
-				<td><select select id="csex" class="select-sex" name="cust-sex">
+				<td><select select id="csex" class="select-sex" name="sex">
 					<option value="Male">Male</option>
 					<option value="Female">Female</option>
 				</select>
@@ -93,13 +90,13 @@ td{
 			</tr>
 			<tr>
 				<td>Phone number</td>
-				<td> <input type="text" id="cphone"  name="cust-phone" class="required"  /> * </td>
+				<td> <input type="text" id="cphone"  name="phone" class="required"  /> * </td>
 				<td>Career</td>
-				<td> <input type="text" id="ccareer"  name="cust-career" /> </td>
+				<td> <input type="text" id="ccareer"  name="career" /> </td>
 			</tr>
 			<tr>
 				<td>Address</td>
-				<td colspan="3"><input type="text" id="caddress" style="width:400px;height:50px"  name="cust-address" /> </td>
+				<td colspan="3"><input type="text" id="caddress" style="width:400px;height:50px"  name="address" /> </td>
 
 			</tr>
 		</table>

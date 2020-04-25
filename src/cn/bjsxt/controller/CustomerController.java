@@ -85,6 +85,7 @@ public class CustomerController {
 	@RequestMapping("insertCustomer")
 	@ResponseBody
 	public String insertCustomer(Customer customer) {
+		System.out.print("-----"+customer);
 		Map map = new HashMap<>();
 		if (customerService.addCustomer(customer) > 0) {
 			map.put("flag", "ok");
