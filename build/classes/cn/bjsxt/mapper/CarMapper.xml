@@ -9,7 +9,7 @@
 	</update>
 
 	<select id="findCarByNumber" resultType="cn.bjsxt.pojo.Car">
-		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description
+		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description,problem
 		from car where number=#{0}
 	</select>
 
@@ -24,23 +24,23 @@
 
 	<!-- 查找到所有的汽车 -->
 	<select id="findAllCars" resultType="cn.bjsxt.pojo.Car">
-		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description
+		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description,problem
 		from car
 	</select>
 	
 	<!-- 通过不同车型查找汽车 -->
 	<select id="findCarByType" resultType="cn.bjsxt.pojo.Car">
-		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description
+		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description,problem
 		from car where type=#{0}
 	</select>
 	<!-- 通过不同品牌查找汽车 -->
 	<select id="findCarByBrand" resultType="cn.bjsxt.pojo.Car">
-		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description
+		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description,problem
 		from car where brand=#{0}
 	</select>
 	<!-- 通过不同价格查找汽车 -->
 	<select id="findCarsByPrice" resultType="cn.bjsxt.pojo.Car">
-		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description
+		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description,problem
 		from car
 		<where>
 			<if test="lowRentPrice!=null" >
@@ -62,8 +62,8 @@
 	</select>
 
 	<insert id="addCar" parameterType="cn.bjsxt.pojo.Car" >
-		insert into car(number, type, brand, color, price, rentprice, deposit, isrenting, img, description)
-		values(#{number}, #{type}, #{brand}, #{color}, #{price}, #{rentprice}, #{deposit}, #{isrenting}, #{img}, #{description})
+		insert into car(number, type, brand, color, price, rentprice, deposit, isrenting, img, description,problem)
+		values(#{number}, #{type}, #{brand}, #{color}, #{price}, #{rentprice}, #{deposit}, #{isrenting}, #{img}, #{description},#{problem})
 	</insert>
 	
 	<update id="updateCar" parameterType="cn.bjsxt.pojo.Car" >
@@ -97,7 +97,10 @@
 				img=#{img},
 			</if>
 			<if test="description!=null" >
-				description=#{description}
+				description=#{description},
+			</if>
+			<if test="problem!=null" >
+				problem=#{problem}
 			</if>
 			where carid=#{carid}
 		</set>
@@ -108,12 +111,12 @@
 	</delete>
 	
 	<select id="selectCarById" resultType="cn.bjsxt.pojo.Car" >
-		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description
+		select carid, number, type, brand, color, price, rentprice, deposit, isrenting, img, description,problem
 		from car where carid=#{0}
 	</select>
 	   
 	<select id="selectCar" resultType="cn.bjsxt.pojo.Car" >
-		select carid, number, type, brand,color, price, rentprice, deposit, isrenting, img, description
+		select carid, number, type, brand,color, price, rentprice, deposit, isrenting, img, description,problem
 		from car
 		<where>
 			<if test="number!=null" >
@@ -136,6 +139,9 @@
 			</if>
 			<if test="isrenting!=null" >
 				and isrenting = #{isrenting}
+			</if>
+			<if test="problem!=null" >
+				and problem = #{problem}
 			</if>
 		</where>
 	</select>

@@ -2,7 +2,7 @@ package cn.bjsxt.pojo;
 
 /**
  * 
- * @author HenryLee 2017年5月31日 下午4:04:35
+ * 
  */
 public class Customer {
 	private Integer custId;
@@ -12,7 +12,7 @@ public class Customer {
 	private String address;
 	private String phone;
 	private String career;
-	private Character sex;
+	private String sex;
 
 	public Integer getCustId() {
 		return custId;
@@ -70,11 +70,11 @@ public class Customer {
 		this.career = career;
 	}
 
-	public Character getSex() {
+	public String getSex() {
 		return sex;
 	}
 
-	public void setSex(Character sex) {
+	public void setSex(String sex) {
 		this.sex = sex;
 	}
 
@@ -83,7 +83,7 @@ public class Customer {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Customer(Integer custId, String name, String pwd, Character sex, String identity, String phone,
+	public Customer(Integer custId, String name, String pwd, String sex, String identity, String phone,
 			String career, String address) {
 		super();
 		this.custId = custId;

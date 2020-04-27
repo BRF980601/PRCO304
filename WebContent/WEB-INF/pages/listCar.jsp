@@ -103,7 +103,14 @@
 					<a href="javascript:void(0)" onclick="deleteCar('${car.carid}')" id="del" >delete</a> | 
 					<a href="preUpdateCar?carId=${car.carid}" >modify</a>
 				</td>
-				<td>broken</td>
+				<td>
+					<c:if test="${car.problem eq 0}">
+					Normal vehicle
+					</c:if>
+					<c:if test="${car.problem eq 1}">
+					The car broke down
+					</c:if>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>

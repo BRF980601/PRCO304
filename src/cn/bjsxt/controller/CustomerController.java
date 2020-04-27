@@ -103,7 +103,7 @@ public class CustomerController {
 		int custId = Integer.parseInt(request.getParameter("custId"));
 		String pwd = request.getParameter("pwd");
 		String name = request.getParameter("name");
-		Character sex = request.getParameter("sex").toCharArray()[0];
+		String sex = request.getParameter("sex");
 		String identity = request.getParameter("identity");
 		String phone = request.getParameter("phone");
 		String career = request.getParameter("career");

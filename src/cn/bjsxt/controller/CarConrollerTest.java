@@ -14,7 +14,7 @@ class CarConrollerTest extends CarConroller {
 	private CarService carservice;
 	@Test
 	void test() {
-		Car car = new Car("9", "SUV1","梅赛德斯", "粉色", 10.0, 100.0, 1000.0,"isrenting"," img", "description");
+		Car car = new Car("9", "SUV1","梅赛德斯", "粉色", 10.0, 100.0, 1000.0,"isrenting"," img", "description","problem");
 		System.out.println(car);
 		addCar();
 	}

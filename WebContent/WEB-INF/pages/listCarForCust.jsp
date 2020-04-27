@@ -150,6 +150,7 @@
 			<th>Lease situation</th>
 			<th>Picture</th>
 			<th>Introduction</th>
+			<th>Problem</th>
 			<th>Operating</th>
 		</tr>
 		<c:forEach items="${cars}" var="car" >
@@ -173,6 +174,13 @@
 					<img src="images/cars/${car.img}" alt="No picture"  style="width:100px;height:80px"/>
 				</td>
 				<td><span id="cdes">${car.description}</span></td>
+				<td><c:if test="${car.problem eq 0}">
+					Normal vehicle
+					</c:if>
+					<c:if test="${car.problem eq 1}">
+					The car broke down
+					</c:if>
+				</td>
 				<td>
 					<c:if  test="${car.isrenting eq 0}">
 						<a href="javascript:;" onclick="rentCar('${car.carid}','${car.number}','${car.rentprice}')">Rent</a>

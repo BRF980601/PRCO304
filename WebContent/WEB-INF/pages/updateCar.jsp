@@ -74,6 +74,21 @@
 				<td> <input type="text" name="brand" id="ccarBrand" value="${car.brand}" class="required" /> * </td>
 			</tr>
 			<tr>
+				  <td>Car problem</td>
+				  <td>
+					  <select name="problem" id="cproblem">
+						  <c:if test="${car.problem eq 0}" >
+							  <option value="0" selected="selected" >Normal vehicle</option>
+							  <option value="1">The car broke down</option>
+						  </c:if>
+						  <c:if test="${car.problem eq 1}" >
+							  <option value="0" >Normal vehicle</option>
+							  <option value="1"  selected="selected">The car broke down</option>
+						  </c:if>
+					  </select>
+				  </td>
+			</tr>
+			<tr>
 				<td>Upload car picture</td>
 				<td colspan="3"> <input type="file" name="imgFile" id="cimg" /> </td>
 			</tr>

@@ -12,8 +12,9 @@ public class Car {
 	private String isrenting;
 	private String img;
 	private String description;
+	private String problem;
 	public Car(int carid, String number, String type, String brand, String color, double price, double rentprice,
-			double deposit, String isrenting, String img, String description) {
+			double deposit, String isrenting, String img, String description,String problem) {
 		super();
 		this.carid = carid;
 		this.number = number;
@@ -26,9 +27,10 @@ public class Car {
 		this.isrenting = isrenting;
 		this.img = img;
 		this.description = description;
+		this.problem=problem;
 	}
 	public Car(String number, String type, String brand, String color, double price, double rentprice,
-			double deposit, String isrenting, String img, String description) {
+			double deposit, String isrenting, String img, String description,String problem) {
 		super();
 		this.carid = carid;
 		this.number = number;
@@ -41,6 +43,7 @@ public class Car {
 		this.isrenting = isrenting;
 		this.img = img;
 		this.description = description;
+		this.problem=problem;
 	}
 	public int getCarid() {
 		return carid;
@@ -108,6 +111,7 @@ public class Car {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 	public Car() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -116,7 +120,13 @@ public class Car {
 	public String toString() {
 		return "Car [carid=" + carid + ", number=" + number + ", type=" + type + ", brand=" + brand + ", color=" + color
 				+ ", price=" + price + ", rentprice=" + rentprice + ", deposit=" + deposit + ", isrenting=" + isrenting
-				+ ", img=" + img + ", description=" + description + "]";
+				+ ", img=" + img + ", description=" + description +", problem=" + problem + "]";
+	}
+	public String getProblem() {
+		return problem;
+	}
+	public void setProblem(String problem) {
+		this.problem = problem;
 	}
 	
 	

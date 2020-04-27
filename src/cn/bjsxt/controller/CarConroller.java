@@ -170,7 +170,8 @@ public class CarConroller {
 		String isrenting = req.getParameter("isrenting");
 		String img = newName;
 		String description = req.getParameter("description");
-		Car car = new Car(carId, number, type,brand, color, price, rentprice, deposit, isrenting, img, description);
+		String problem =req.getParameter("problem");
+		Car car = new Car(carId, number, type,brand, color, price, rentprice, deposit, isrenting, img, description,problem);
 		System.out.println(car);
 		int result = carService.updateCar(car);
 		if(result>0){
@@ -241,7 +242,12 @@ public class CarConroller {
 		}
 		map.put("isrenting", isrenting);
 		
-//		String problem =req.get
+		String problem = req.getParameter("problem");
+		if("-1".equals(problem)){
+			problem = null;
+		}
+		map.put("problem", problem);
+
 		
 		List<Car> cars =  carService.findCar(map);
 		if(cars.size()>0){
@@ -273,7 +279,8 @@ public class CarConroller {
 		String isrenting = req.getParameter("isrenting");
 		String img = newName;
 		String description = req.getParameter("description");
-		Car car = new Car(number, type,brand, color, price, rentprice, deposit, isrenting, img, description);
+		String problem =req.getParameter("problem");
+		Car car = new Car(number, type,brand, color, price, rentprice, deposit, isrenting, img, description,problem);
 		System.out.println(car);
 		int result = carService.addCar(car);
 		if(result>0){
