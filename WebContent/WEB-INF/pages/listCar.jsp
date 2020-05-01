@@ -105,10 +105,10 @@
 				</td>
 				<td>
 					<c:if test="${car.problem eq 0}">
-					Normal vehicle
+					Normal 
 					</c:if>
 					<c:if test="${car.problem eq 1}">
-					The car broke down
+					Broken
 					</c:if>
 				</td>
 			</tr>
